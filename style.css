@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f6f1;
+    color: #333;
+}
+
+/* Navigation */
+
+nav {
+    background-color: #283b35;
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav h2 {
+    color: #e9c58d;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: black;
+}
+
+nav select {
+    padding: 9px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Home */
+
+.hero {
+    min-height: 430px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("https://images.unsplash.com/photo-1566127992631-137a642a90f4");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    background-color: #c69b60;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #a77d45;
+}
+
+/* Sections */
+
+section {
+    padding: 55px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    color: #283b35;
+    margin-bottom: 15px;
+}
+
+.section-text {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Categories */
+
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.categories button {
+    padding: 10px 22px;
+    border: 1px solid #283b35;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+}
+
+.categories button:hover {
+    background: #283b35;
+    color: white;
+}
+
+/* Search */
+
+.search-box {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin: 0 auto 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Exhibits */
+
+.exhibit-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 18px;
+}
+
+.card h3 {
+    color: #283b35;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.favorite {
+    background: #283b35;
+    color: white;
+    border: none;
+    padding: 9px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* About */
+
+.about {
+    background: #eae6dc;
+    text-align: center;
+}
+
+.about > p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Information and Contact */
+
+.info-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.info-box {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    flex: 1 1 220px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.info-box h3 {
+    color: #283b35;
+    margin-bottom: 12px;
+}
+
+/* Feedback */
+
+#feedbackForm {
+    max-width: 500px;
+    margin: auto;
+}
+
+#feedbackForm textarea {
+    resize: vertical;
+}
+
+#feedbackMessage {
+    margin-top: 15px;
+    color: #283b35;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Footer */
+
+footer {
+    background: #283b35;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Mobile Responsive */
+
+@media(max-width: 600px) {
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .nav-links {
+        text-align: center;
+    }
+
+}

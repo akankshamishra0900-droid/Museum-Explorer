@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Museum Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- Navigation Bar -->
+
+    <nav>
+        <h2>🏛 Museum Visitor Experience Explorer</h2>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#exhibits">Exhibits</a>
+            <a href="#about">About</a>
+            <a href="#information">Visitor Info</a>
+            <a href="#contact">Contact</a>
+            <a href="#feedback">Feedback</a>
+        </div>
+
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+        </select>
+    </nav>
+
+    <!-- Home Section -->
+
+    <section class="hero" id="home">
+
+        <div>
+            <h1 id="welcome-title">
+                "One Museum , A Thousand Stories."
+            </h1>
+
+            <p id="welcome-text">
+                Every object has a story.
+                Come and discover yours!
+            </p>
+
+            <a href="#exhibits" class="btn" id="explore-btn">
+                Explore Exhibits
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Exhibits Section -->
+
+    <section id="exhibits">
+
+        <h2 class="section-title" id="exhibit-title">
+            Discover Our Exhibits
+        </h2>
+
+        <p class="section-text">
+            Explore amazing collections from different fields.
+        </p>
+
+        <input type="text" id="search" class="search-box" placeholder="Search for an exhibit..."
+            onkeyup="searchExhibits()">
+
+        <!-- Categories -->
+
+        <div class="categories">
+
+            <button onclick="filterExhibits('all')">All</button>
+            <button onclick="filterExhibits('history')">History</button>
+            <button onclick="filterExhibits('art')">Art</button>
+            <button onclick="filterExhibits('science')">Science</button>
+            <button onclick="filterExhibits('culture')">Culture</button>
+
+        </div>
+
+        <!-- Exhibit Cards -->
+
+        <div class="exhibit-container">
+
+            <div class="card" data-category="history">
+
+                <img src="https://media.istockphoto.com/id/1343698772/photo/ancient-stone-chariot-with-archaeological-ruins-in-the-courtyard-of-vittala-temple-at-hampi.jpg?s=612x612&w=0&k=20&c=iaK8rxzVtgrs2F-_Lt596JHer13-e9Es_TINWl6vta4=" alt="Ancient historical">
+
+                <div class="card-content">
+                    <h3>Ancient History</h3>
+
+                    <p>
+                        Discover ancient civilizations,
+                        historical objects and their stories.
+                    </p>
+
+                    <button class="favorite" onclick="addFavorite(this)">
+                        ♡ Add Favourite
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="card" data-category="art">
+
+                <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5" alt="Art gallery">
+
+                <div class="card-content">
+                    <h3>Art Gallery</h3>
+
+                    <p>
+                        Explore beautiful paintings and
+                        creative masterpieces.
+                    </p>
+
+<button class="favorite" onclick="addFavorite(this)">
+                        ♡ Add Favourite
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="card" data-category="science">
+
+                <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d" alt="Science exhibition">
+
+                <div class="card-content">
+                    <h3>Science World</h3>
+
+                    <p>
+                        Learn about scientific discoveries,
+                        experiments and inventions.
+                    </p>
+
+                    <button class="favorite" onclick="addFavorite(this)">
+                        ♡ Add Favourite
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="card" data-category="culture">
+
+                <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04" alt="Cultural exhibition">
+
+                <div class="card-content">
+                    <h3>Cultural Heritage</h3>
+
+                    <p>
+                        Experience traditional art,
+                        cultural objects and heritage.
+                    </p>
+
+                    <button class="favorite" onclick="addFavorite(this)">
+                        ♡ Add Favourite
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+
+    <section id="about" class="about">
+
+        <h2 class="section-title">About Our Platform</h2>
+
+        <p>
+            Museum Explorer is a visitor experience platform
+            designed to make museum visits interesting and enjoyable.
+            Visitors can explore exhibits, search collections,
+            discover categories and save their favourite exhibits.
+            Our goal is to make learning through museums easier and fun.
+        </p>
+
+    </section>
+
+    <!-- Visitor Information -->
+
+    <section id="information">
+
+        <h2 class="section-title">Plan Your Visit</h2>
+
+        <p class="section-text">
+            Everything you need to know before exploring.
+        </p>
+
+        <div class="info-container">
+
+            <div class="info-box">
+                <h3>📍 Location</h3>
+                <p>New Delhi, India</p>
+            </div>
+
+            <div class="info-box">
+                <h3>🕒 Opening Hours</h3>
+                <p>Monday - Saturday</p>
+                <p>10 AM - 5 PM</p>
+            </div>
+
+            <div class="info-box">
+                <h3>🎟 Entry</h3>
+                <p>Please check ticket availability.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+
+    <section id="contact">
+
+        <h2 class="section-title">Contact Us</h2>
+
+        <p class="section-text">
+            We would love to hear from you!
+        </p>
+
+        <div class="info-container">
+
+            <div class="info-box">
+                <h3>📍 Address</h3>
+                <p>New Delhi, India</p>
+            </div>
+
+            <div class="info-box">
+                <h3>📞 Phone</h3>
+                <p>+91 9876543210</p>
+            </div>
+
+            <div class="info-box">
+                <h3>📧 Email</h3>
+                <p>museum@example.com</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Feedback Section -->
+
+    <section id="feedback" class="about">
+
+        <h2 class="section-title">Visitor Feedback</h2>
+
+        <p class="section-text">
+            Your feedback helps us improve!
+        </p>
+
+        <form id="feedbackForm">
+
+            <input type="text" id="visitorName" placeholder="Enter Your Name" required class="search-box">
+
+            <input type="email" id="visitorEmail" placeholder="Enter Your Email" required class="search-box">
+
+            <select id="rating" class="search-box" required>
+                <option value="">Rate Your Experience</option>
+                <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                <option value="4">⭐⭐⭐⭐ Very Good</option>
+                <option value="3">⭐⭐⭐ Good</option>
+                <option value="2">⭐⭐ Fair</option>
+                <option value="1">⭐ Poor</option>
+            </select>
+
+            <textarea id="visitorMessage" placeholder="Write your feedback..." class="search-box" rows="5"
+                required></textarea>
+
+            <button type="submit" class="btn">
+                Submit Feedback
+            </button>
+
+        </form>
+
+        <p id="feedbackMessage"></p>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+        <h3>Museum Explorer</h3>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
